@@ -1,15 +1,18 @@
 ---
-title: "GV300 Advanced Quantitative Politics"
+title: "Muhammad Ahmad Hassan"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  BSc Economics and Politics | University of Essex
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
 
 ```
 
+## About Me
+
+I am a final-year BSc (Hons) Economics and Politics student at the University of Essex. My academic interests focus on understanding how markets function and how political institutions shape economic outcomes.
+
+Beyond my studies, I enjoy reading widely to gain new perspectives on economic and political issues. I also play golf in my free time.
