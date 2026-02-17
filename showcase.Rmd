@@ -15,3 +15,95 @@ Here I will include:
 - Data visualisations
 - Statistical models
 - Interpretation of results
+
+# visualization 
+
+example from assignment 2
+
+## Data and Setup
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+
+# Load UK election data directly from official source
+uk_csv <- "https://electionresults.parliament.uk/general-elections/6/candidacies.csv"
+uk_raw <- readr::read_csv(uk_csv, show_col_types = FALSE)
+
+# Clean column names
+names(uk_raw) <- names(uk_raw) %>%
+  tolower() %>%
+  str_replace_all("\\s+", "_")
+
+# Data cleaning
+uk <- uk_raw %>%
+  filter(!`election_is_by-election`) %>%
+  select(
+    constituency = constituency_name,
+    country      = country_name,
+    valid_votes  = candidate_vote_count,
+    electorate   = electorate
+  ) %>%
+  group_by(country, constituency) %>%
+  summarise(
+    valid_votes = sum(valid_votes, na.rm = TRUE),
+    electorate  = max(electorate, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(turnout_registered = 100 * valid_votes / electorate) %>%
+  filter(is.finite(turnout_registered), electorate > 0)
+
+ggplot(uk, aes(x = country, y = valid_votes, fill = country)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Constituency Size by Country",
+    subtitle = "Boxplots show medians and variation clearly",
+    x = "Country",
+    y = "Valid Votes"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    legend.position = "none"
+  )
+```
+#Visualising Constituency Size Differences
+
+I compared variation across countries by using a boxplot.
+The Boxplot showed the median, spread, and outlier for each country.
+
+# Interpretation
+
+The boxplot shows that constituency sizes are not the same across the UK.
+
+England has a wide range of constituency sizes. Some are much bigger than others.
+
+Scotland has a few very small constituencies, which appear as dots outside the main box (these are called outliers).
+
+Wales seems to have slightly smaller typical constituency sizes compared to England.
+
+Northern Ireland’s constituencies are more similar to each other, meaning there is less variation.
+
+Overall, the graph shows that the number of voters per constituency is not equal across the UK.
+
+This means that some Members of Parliament (MPs) represent many more voters than others.
+In larger constituencies, each vote may carry slightly less influence compared to smaller constituencies.
+
+This raises important questions about fairness and equal representation in elections.
+
+# Conclusion
+
+This analysis shows that I can:
+
+Clean and organise real election data
+
+Use R to summarise and group data correctly
+
+Create clear and easy-to-read visualisations
+
+Explain statistical results in simple and understandable language
+
+The code is fully reproducible, meaning anyone can run it and get the same results.
+The dataset is downloaded directly from the official UK Parliament source.
