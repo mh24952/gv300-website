@@ -1,0 +1,26 @@
+{
+    "id": "0FE10262",
+    "path": "~/gv300-website/about.Rmd",
+    "project_path": "about.Rmd",
+    "type": "r_markdown",
+    "hash": "2380905868",
+    "contents": "",
+    "dirty": false,
+    "created": 1771301525218.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "11,0",
+        "scrollLine": "19"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1771301801,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1771301801230,
+    "read_only": false,
+    "read_only_alternatives": []
+}
