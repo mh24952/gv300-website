@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "Profile"
       href: landing.html
+    - text: "my work"
+      href: showcase.html
     - text: "About"
       href: about.html
 

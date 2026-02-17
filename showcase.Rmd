@@ -1,0 +1,17 @@
+---
+title: "GV300 Showcase"
+author:
+  - name: "Muhammad Ahmad Hassan"
+output: distill::distill_article
+---
+# Introduction
+
+This page presents selected work from GV300 (Advanced Quantitative Politics).  
+It demonstrates my ability to analyse data in R and communicate results clearly.
+
+# Example Analysis
+
+Here I will include:
+- Data visualisations
+- Statistical models
+- Interpretation of results
