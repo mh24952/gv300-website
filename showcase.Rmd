@@ -18,7 +18,26 @@ Here I will include:
 
 # visualization 
 
-example from assignment 2
+*example from assignment 2*
+
+In this example, I studied how the number of voters differs between constituencies in the United Kingdom.
+
+The main question I was asking was:
+
+**Are all votes equal across constituencies?**
+
+In a fair system, each Member of Parliament (MP) should represent a similar number of voters.  
+However, if some constituencies are much larger than others, then some MPs represent many more people. This could mean that votes do not have equal weight everywhere in the country.
+
+To investigate this,what I did was to:
+
+- Download official UK election data  
+- Clean and organise the data using R  
+- Calculate the number of valid votes in each constituency  
+- Use a boxplot to compare differences between countries  
+
+The aim of this analysis was to show that I can work with real data, create clear visualisations, and explain statistical results in a simple and understandable way.
+
 
 ## Data and Setup
 
