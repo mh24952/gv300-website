@@ -1,0 +1,27 @@
+---
+title: "Muhammad Ahmad Hassan"
+image: "profile.jpg.jpeg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/mahmadhassan1/"
+  - label: GitHub
+    url: "https://github.com/"
+  - label: Email
+    url: "mh24952@essex.ac.uk"
+output:
+  postcards::trestles
+---
+ 
+## Bio
+
+I am a final-year BSc (Hons) Economics and Politics student at the University of Essex. My academic interests focus on understanding how markets function and how political institutions shape economic outcomes.
+
+Beyond my studies, I enjoy reading widely to gain new perspectives on economic and political issues. I also play golf in my free time.
+
+## Education
+
+**University of Essex** | Colchester, UK
+
+Bsc in Economics and Politics | September 2023 - May 2026
+
+

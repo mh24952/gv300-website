@@ -1,0 +1,27 @@
+---
+title: "GV300 Showcase: Quantitative Analysis and Visualisation"
+description: "Selected analytical work from GV300 Advanced Quantitative Politics."
+author:
+  - name: Muhammad Ahmad Hassan
+    affiliation: BSc Economics and Politics, University of Essex
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    code_folding: true
+---
+
+
+```knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+```
+# Introduction
+
+This page shows some of my best work from GV300 Advanced Quantitative Politics. 
+
+In this example, I use R to analyse real data and answer a research question. I also create a visualisation to clearly show what the results mean.
+
+
+
+

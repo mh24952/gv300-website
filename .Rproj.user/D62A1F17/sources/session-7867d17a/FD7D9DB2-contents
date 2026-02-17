@@ -1,6 +1,6 @@
 name: "gv300-website"
-title: ""
-description: |
+title: "GV300 Website"
+description: "Quantitative Analysis Portfolio"
   
 output_dir: "."
 navbar:
@@ -9,4 +9,5 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+
+
