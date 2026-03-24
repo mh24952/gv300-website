@@ -1,0 +1,68 @@
+---
+title: "Text Analysis"
+format: html
+editor: visual
+---
+
+## Introduction
+
+This section applies text analysis techniques to examine patterns in textual data. As the dataset used in previous assignments does not contain open-ended responses, a small illustrative dataset is constructed to demonstrate key text analysis methods such as tokenization and word frequency analysis.
+
+## Load Packages
+
+```{r}
+
+library(tidyverse)
+library(tidytext)
+```
+
+# Example text data
+
+```{r}
+# Example text data
+text_data <- c(
+  "Financial inclusion is important for economic growth",
+  "Access to banking services improves livelihoods",
+  "Mobile banking is transforming rural economies",
+  "Lack of access to credit is a major issue"
+)
+
+text_df <- tibble(text = text_data)
+
+#Tokenization
+
+tidy_words <- text_df %>%
+  unnest_tokens(word, text)
+
+# Remove stopwords
+
+data("stop_words")
+
+clean_words <- tidy_words %>%
+  anti_join(stop_words, by = "word")
+
+#Word frequency
+
+word_counts <- clean_words %>%
+  count(word, sort = TRUE)
+
+word_counts
+
+#Plot
+
+word_counts %>%
+  slice_max(n, n = 10) %>%
+  ggplot(aes(x = reorder(word, n), y = n)) +
+  geom_col() +
+  coord_flip()
+
+
+```
+
+## Interpretation
+
+The most frequent words include “access” and “banking,” which appear more than once, indicating that these are central themes in the text. Other terms such as “financial,” “growth,” and “livelihoods” suggest a focus on economic development and the role of financial services in improving living conditions. Overall, the results highlight that financial inclusion and access to banking services are key topics in the dataset.
+
+## Conclusion
+
+This analysis demonstrates how text data can be processed to identify key themes using techniques such as tokenization and word frequency analysis. Although an illustrative dataset was used, the methods shown here can be applied to real-world textual data to extract meaningful insights.
