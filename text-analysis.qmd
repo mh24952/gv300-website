@@ -12,57 +12,67 @@ This section applies text analysis techniques to examine patterns in textual dat
 
 ```{r}
 
-library(tidyverse)
-library(tidytext)
+library(quanteda)
+library(readtext)
+library(ggplot2)
 ```
 
 # Example text data
 
 ```{r}
-# Example text data
-text_data <- c(
-  "Financial inclusion is important for economic growth",
-  "Access to banking services improves livelihoods",
-  "Mobile banking is transforming rural economies",
-  "Lack of access to credit is a major issue"
+## Preparing texts
+
+files <- list.files("../UK_Manifestos", pattern = "\\.txt$", full.names = TRUE)
+
+manifestos <- readtext::readtext(files)
+manifestos_corpus <- quanteda::corpus(manifestos)
+
+tokens_clean <- quanteda::tokens(
+  manifestos_corpus,
+  remove_punct = TRUE,
+  remove_numbers = TRUE
+) |>
+  quanteda::tokens_remove(stopwords("en"))
+
+dfm_mat <- quanteda::dfm(tokens_clean)
+
+## Top Words in UK Manifestos
+
+top_words_vec <- quanteda::topfeatures(dfm_mat, 10)
+
+top_words <- data.frame(
+  feature = names(top_words_vec),
+  frequency = as.numeric(top_words_vec)
 )
 
-text_df <- tibble(text = text_data)
+top_words
 
-#Tokenization
-
-tidy_words <- text_df %>%
-  unnest_tokens(word, text)
-
-# Remove stopwords
-
-data("stop_words")
-
-clean_words <- tidy_words %>%
-  anti_join(stop_words, by = "word")
-
-#Word frequency
-
-word_counts <- clean_words %>%
-  count(word, sort = TRUE)
-
-word_counts
-
-#Plot
-
-word_counts %>%
-  slice_max(n, n = 10) %>%
-  ggplot(aes(x = reorder(word, n), y = n)) +
+## Visualisation 
+ggplot(top_words, aes(x = reorder(feature, frequency), y = frequency)) +
   geom_col() +
-  coord_flip()
+  coord_flip() +
+  labs(
+    title = "Top Words in UK Manifestos",
+    x = "Words",
+    y = "Frequency"
+  )
+
 
 
 ```
 
 ## Interpretation
 
-The most frequent words include “access” and “banking,” which appear more than once, indicating that these are central themes in the text. Other terms such as “financial,” “growth,” and “livelihoods” suggest a focus on economic development and the role of financial services in improving living conditions. Overall, the results highlight that financial inclusion and access to banking services are key topics in the dataset.
+The figure shows the most common words used in UK political manifestos after removing basic words, punctuation, and numbers. Words like “government,” “people,” “labour,” “britain,” and “public” appear most often, which suggests that these texts focus mainly on the state, national identity, and public policy.
+
+The word “labour” appears frequently, which could refer both to the Labour Party and to discussions about jobs and workers. In the same way, words like “government” and “public” show that there is a strong focus on how the country is run and on public services. Words such as “must” and “can” suggest a persuasive style, where parties are making promises and outlining their plans.
+
+Overall, this shows that even a simple word count can help us understand the main topics and priorities in political texts.
+
+Word frequency analysis does help us see the most common topics in the text, but it also has some limitations. Just because a word appears often does not mean we fully understand its meaning or context. Many common words may simply reflect general political language rather than specific policy ideas.
+
+Thus, the analysis could be improved by comparing different political parties (for example, Conservative vs Labour) or looking at how language changes over time. Methods, such as looking at word pairs (bigrams) or identifying themes (topic modelling), could also give a deeper understanding of what the texts are really about.
 
 ## Conclusion
 
-This analysis demonstrates how text data can be processed to identify key themes using techniques such as tokenization and word frequency analysis. Although an illustrative dataset was used, the methods shown here can be applied to real-world textual data to extract meaningful insights.
+In conclusion, this example shows how text analysis can be used to study large collections of political texts. By breaking the text into words and finding the most common ones, we can clearly see overall patterns in political messages in a simple and organised way.
