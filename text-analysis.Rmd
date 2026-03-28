@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(quanteda)
 library(readtext)
 library(ggplot2)
+library(tibble)
 
 ```
 
@@ -22,7 +23,9 @@ library(ggplot2)
 This section applies text analysis techniques to examine patterns in textual data. This example uses a real collection of UK political manifestos to demonstrate key text analysis methods such as tokenization and word frequency analysis.
 
 
-## Load and prepare texts
+## Data Preparation
+
+This section loads and prepares the text data. Each manifesto is read, combined into a single text per document, and converted into a corpus object for analysis.
 
 ```{r prepare_texts}
 manifesto_dir <- if (dir.exists("UK_Manifestos")) {
@@ -42,7 +45,7 @@ doc_names <- basename(files)
 
 manifestos_corpus <- quanteda::corpus(texts, docnames = doc_names)
 
-## Cleaning tokens
+## Token Cleaning
 
 tokens_clean <- quanteda::tokens(
   manifestos_corpus,
@@ -56,7 +59,7 @@ dfm_mat <- quanteda::dfm(tokens_clean)
 
 
 ```{r top_words}
-## Top words in UK Manifesto
+## Top Words in UK Manifestos
 
 top_words_vec <- quanteda::topfeatures(dfm_mat, 10)
 
@@ -92,9 +95,15 @@ Word frequency analysis does help us see the most common topics in the text, but
 
 Thus, the analysis could be improved by comparing different political parties (for example, Conservative vs Labour) or looking at how language changes over time. Methods, such as looking at word pairs (bigrams) or identifying themes (topic modelling), could also give a deeper understanding of what the texts are really about.
 
+This pattern reflects how political communication often focuses on broad, shared themes such as governance and public services, rather than highly specific policy language.
+
 ## Conclusion
 
-In conclusion, this example shows how text analysis can be used to study large collections of political documents. By breaking the text into words and finding the most common ones, we can clearly see overall patterns in political messages in a simple and organised way.
+## Conclusion
+
+This analysis demonstrates how text analysis techniques can be used to study large collections of political documents. By transforming text into measurable data, we can identify patterns in political language in a clear and systematic way.
+
+However, simple word frequency analysis has limitations, as it does not capture context or meaning. More advanced methods such as topic modelling or bigram analysis could provide deeper insights into political discourse.
   
   
   

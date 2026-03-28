@@ -1,5 +1,5 @@
 name: "gv300-website"
-title: "GV300 Website"
+title: "Muhammad Ahmad Hassan"
 description: "Quantitative Analysis Portfolio"
 
 output_dir: "."
@@ -12,8 +12,6 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Profile"
-      href: landing.html
     - text: "My Work"
       href: showcase.html
     - text: "Text Analysis"

@@ -7,18 +7,52 @@ author: null
 output:
   distill::distill_article:
     toc: false
+    css: styles.css
+    
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
 
 
+
+```{=html}
+<div class="profile-layout">
+  <div class="profile-left">
+    <img src="profile.jpg.jpeg" class="profile-photo" alt="Portrait of Muhammad Ahmad Hassan">
+
+    <h2 class="profile-name">Muhammad Ahmad Hassan</h2>
+
+    <div class="profile-links">
+      <a class="btn" href="https://www.linkedin.com/in/mahmadhassan1/" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/mh24952" target="_blank">GitHub</a>
+      <a class="btn" href="mailto:mh24952@essex.ac.uk">Email</a>
+    </div>
+  </div>
+
+  <div class="profile-right">
+  
 ```
 
 
 ## About Me
 
-I am a final-year BSc (Hons) Economics and Politics student at the University of Essex. My academic interests focus on understanding how markets function and how political institutions shape economic outcomes.
+I am a final-year BSc (Hons) Economics and Politics student at the University of Essex with a strong interest in how markets function and how political institutions shape economic outcomes.
 
-Beyond my studies, I enjoy reading widely to gain new perspectives on economic and political issues. I also play golf in my free time.
+Beyond my academic work, I enjoy reading widely to gain new perspectives on global economic and political issues, and I play golf in my free time.
+
+## Bio
+
+My academic focus lies in quantitative analysis, political economy, and the interaction between markets and institutions. Through my studies, I have developed strong skills in statistical modelling, data analysis in R, and communicating empirical findings clearly and professionally.
+
+## Education
+
+**University of Essex**  
+BSc (Hons) Economics and Politics *(Expected First Class)*  
+September 2023 – May 2026
+
+  </div>
+
+</div>
+

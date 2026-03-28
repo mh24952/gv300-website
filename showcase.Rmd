@@ -4,19 +4,19 @@ author:
   - name: "Muhammad Ahmad Hassan"
 output: distill::distill_article
 ---
-# Introduction
+## Introduction
 
 This page presents selected work from GV300 (Advanced Quantitative Politics).  
 It demonstrates my ability to analyse data in R and communicate results clearly.
 
-# Example Analysis
+## Example Analysis
 
 Here I will include:
 - Data visualisations
 - Statistical models
 - Interpretation of results
 
-# visualization 
+## Visualization 
 
 *example from assignment 2*
 
@@ -24,12 +24,12 @@ In this example, I studied how the number of voters differs between constituenci
 
 The main question I was asking was:
 
-**Are all votes equal across constituencies?**
+**Are votes equally represented across constituencies?**
 
 In a fair system, each Member of Parliament (MP) should represent a similar number of voters.  
 However, if some constituencies are much larger than others, then some MPs represent many more people. This could mean that votes do not have equal weight everywhere in the country.
 
-To investigate this,what I did was to:
+To investigate this, I :
 
 - Download official UK election data  
 - Clean and organise the data using R  
@@ -88,12 +88,12 @@ ggplot(uk, aes(x = country, y = valid_votes, fill = country)) +
     legend.position = "none"
   )
 ```
-#Visualising Constituency Size Differences
+## Visualising Constituency Size Differences
 
 I compared variation across countries by using a boxplot.
-The Boxplot showed the median, spread, and outlier for each country.
+The boxplot showed the median, spread, and outlier for each country.
 
-# Interpretation
+## Interpretation
 
 The boxplot shows that constituency sizes are not the same across the UK.
 
@@ -112,17 +112,16 @@ In larger constituencies, each vote may carry slightly less influence compared t
 
 This raises important questions about fairness and equal representation in elections.
 
-# Conclusion
+This variation highlights potential inequalities in representation, which is an important concern in democratic systems.
+
+## Conclusion
 
 This analysis shows that I can:
 
-Clean and organise real election data
+- Clean and organise real election data  
+- Use R to summarise and group data correctly  
+- Create clear and easy-to-read visualisations  
+- Explain statistical results in simple and understandable language  
 
-Use R to summarise and group data correctly
-
-Create clear and easy-to-read visualisations
-
-Explain statistical results in simple and understandable language
-
-The code is fully reproducible, meaning anyone can run it and get the same results.
-The dataset is downloaded directly from the official UK Parliament source.
+The code is fully reproducible, meaning anyone can run it and obtain the same results.  
+The dataset is downloaded directly from an official UK Parliament source.

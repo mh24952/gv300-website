@@ -13,24 +13,24 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ## About This Website
 
-This website was created for my GV300 module (Advanced Quantitative Politics) at the University of Essex.
+This website was created as a part of my GV300 module (Advanced Quantitative Politics) at the University of Essex.
 
 It serves as a portfolio where I present examples of my data analysis and research work.
 
-On this site, you can see how I:
+This website demonstrates my ability to:
 
 - Analyse data using R  
-- Create clear and easy-to-understand visualisations  
-- Explain statistical results in simple language  
-- Present academic work in a structured and organised way  
+- Create clear and effective visualisations  
+- Communicate statistical results in simple and accessible language  
+- Present academic work in a structured and organised manner   
 
 ## How This Website Was Built
 
 This website was built using:
 
 - **R Markdown** to combine writing and code in one document  
-- **Distill and Postcards themes** to create a clean and professional layout  
+- **Distill** for creating a clean and professional website layout   
 - **Git and GitHub** to manage and track changes  
 - **GitHub Pages** to publish the website online  
 
-The goal was to build a simple and professional academic portfolio that clearly demonstrates my skills in quantitative analysis and data communication.
+The goal of this website is to present a clear and professional academic portfolio that demonstrates my skills in quantitative analysis and data communication.
