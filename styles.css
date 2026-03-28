@@ -1,0 +1,36 @@
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Reduce space around title + author */
+.d-byline {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.d-title {
+  margin-bottom: 6px;
+}
+
+.d-title-block {
+  margin-bottom: 12px;
+}
+
+/* Make contents section tighter */
+.d-contents {
+  margin-top: 8px;
+}
+
+.d-contents nav ul {
+  padding-left: 18px;
+}
+
+.d-contents nav ul li {
+  margin-bottom: 4px;
+}

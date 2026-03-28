@@ -1,7 +1,12 @@
+name: "gv300-website"
 title: "GV300 Website"
 description: "Quantitative Analysis Portfolio"
 
 output_dir: "."
+
+output:
+  distill::distill_website:
+    css: styles.css
 
 navbar:
   right:

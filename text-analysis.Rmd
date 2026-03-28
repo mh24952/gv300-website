@@ -5,6 +5,7 @@ date: "2026-01-27"
 output:
   distill::distill_article:
     toc: true
+    toc_depth: 2
 description: "A portfolio showcasing data analysis and visualisation work."
 ---
 
