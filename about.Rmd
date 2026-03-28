@@ -1,11 +1,14 @@
 ---
-title: "About this site"
-description: |
-  Some additional details about the website
+title: "About This Site"
+description: "Additional details about this website."
+author: null
+output:
+  distill::distill_article:
+    toc: false
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ## About This Website
