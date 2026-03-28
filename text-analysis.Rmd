@@ -1,0 +1,105 @@
+---
+title: "Text Analysis of UK Political Manifestos"
+author: "Muhammad Ahmad Hassan"
+date: "2026-01-27"
+output:
+  distill::distill_article:
+    toc: true
+description: "A portfolio showcasing data analysis and visualisation work."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(quanteda)
+library(readtext)
+library(ggplot2)
+
+```
+
+## Introduction
+
+This section applies text analysis techniques to examine patterns in textual data. This example uses a real collection of UK political manifestos to demonstrate key text analysis methods such as tokenization and word frequency analysis.
+
+
+## Load and prepare texts
+
+```{r prepare_texts}
+manifesto_dir <- if (dir.exists("UK_Manifestos")) {
+  "UK_Manifestos"
+} else {
+  "../UK_Manifestos"
+}
+
+files <- list.files(manifesto_dir, pattern = "\\.txt$", full.names = TRUE)
+
+manifestos <- lapply(files, function(f) {
+  paste(readLines(f, warn = FALSE, encoding = "UTF-8"), collapse = " ")
+})
+
+texts <- as.character(unlist(manifestos))
+doc_names <- basename(files)
+
+manifestos_corpus <- quanteda::corpus(texts, docnames = doc_names)
+
+## Cleaning tokens
+
+tokens_clean <- quanteda::tokens(
+  manifestos_corpus,
+  remove_punct = TRUE,
+  remove_numbers = TRUE
+) |>
+  quanteda::tokens_remove(stopwords("en"))
+
+dfm_mat <- quanteda::dfm(tokens_clean)
+```
+
+
+```{r top_words}
+## Top words in UK Manifesto
+
+top_words_vec <- quanteda::topfeatures(dfm_mat, 10)
+
+top_words <- tibble::enframe(top_words_vec, name = "feature", value = "frequency")
+
+top_words
+```
+
+
+
+```{r plot}
+## Visualisation
+
+ggplot(top_words, aes(x = reorder(feature, frequency), y = frequency)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Top Words in UK Manifestos",
+    x = "Words",
+    y = "Frequency"
+  )
+```
+  
+## Interpretation
+
+The figure shows the most common words used in UK political manifestos after removing basic words, punctuation, and numbers. Words like “government,” “people,” “labour,” “britain,” and “public” appear most often, which suggests that these texts focus mainly on the state, national identity, and public policy.
+
+The word “labour” appears frequently, which could refer both to the Labour Party and to discussions about jobs and workers. In the same way, words like “government” and “public” show that there is a strong focus on how the country is run and on public services. Words such as “must” and “can” suggest a persuasive style, where parties are making promises and outlining their plans.
+
+Overall, this shows that even a simple word count can help us understand the main topics and priorities in political texts.
+
+Word frequency analysis does help us see the most common topics in the text, but it also has some limitations. Just because a word appears often does not mean we fully understand its meaning or context. Many common words may simply reflect general political language rather than specific policy ideas.
+
+Thus, the analysis could be improved by comparing different political parties (for example, Conservative vs Labour) or looking at how language changes over time. Methods, such as looking at word pairs (bigrams) or identifying themes (topic modelling), could also give a deeper understanding of what the texts are really about.
+
+## Conclusion
+
+In conclusion, this example shows how text analysis can be used to study large collections of political documents. By breaking the text into words and finding the most common ones, we can clearly see overall patterns in political messages in a simple and organised way.
+  
+  
+  
+
+
+
+
+
+
