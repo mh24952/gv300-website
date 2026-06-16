@@ -1,0 +1,137 @@
+---
+title: "cv"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+## Profile
+
+I am an Economics and Politics graduate from the University of Essex, predicted First Class, with strong interests in data analysis, economic research, financial and operational analysis, and evidence-based decision-making.
+
+My academic and professional experience has helped me develop quantitative reasoning, communication, problem-solving, attention to detail, and the ability to work responsibly across different professional environments.
+
+## Education
+
+```{=html}
+<div class="cv-section-card">
+  <h3>University of Essex, United Kingdom</h3>
+  <p class="cv-meta">BSc Economics and Politics | Expected June 2026 | Predicted First Class</p>
+  <p><strong>Relevant modules:</strong> Econometrics, Quantitative Political Analysis, Microeconomics, Macroeconomics, International Political Economy.</p>
+  <ul>
+    <li>Developed analytical and quantitative skills through econometric modelling, statistical analysis, and data-focused projects.</li>
+    <li>Used R to analyse real-world datasets, produce visualisations, interpret trends, and communicate evidence-based insights.</li>
+    <li>Completed an independent policy research project analysing Pakistan’s economic resilience using econometric techniques and longitudinal data.</li>
+    <li>Built a personal portfolio website to present data analysis and research work using R.</li>
+  </ul>
+</div>
+```
+## Professional Experience
+
+```{=html}
+<div class="cv-grid">
+
+  <div class="cv-section-card">
+    <h3>Work Placement Intern</h3>
+    <p class="cv-meta">HBL UK, London | August 2025</p>
+    <p>Gained exposure to Wealth Management, Commercial Banking, and Treasury within a regulated financial environment.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Online Assistant</h3>
+    <p class="cv-meta">Sainsbury’s, Colchester | September 2025 – January 2026</p>
+    <p>Supported online orders, stock movement, substitutions, customer service, and operational targets in a fast-paced retail environment.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Finance and Operations Intern</h3>
+    <p class="cv-meta">Ahmad Traders, Lahore | June – July 2024</p>
+    <p>Analysed sales and financial data, assisted with budgets and reports, and supported business performance understanding.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Trading Assistant</h3>
+    <p class="cv-meta">Sainsbury’s, Colchester | December 2024</p>
+    <p>Supported shop-floor operations, stock replenishment, product rotation, customer service, and store standards.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Manufacturing and Operations Intern</h3>
+    <p class="cv-meta">Pak Lamps Limited, Lahore | August 2023</p>
+    <p>Gained exposure to production workflows, supply chain processes, operational risks, and efficiency improvements.</p>
+  </div>
+
+</div>
+```
+
+## Skills
+
+```{=html}
+<div class="skills-cloud">
+  <span>Quantitative Analysis</span>
+  <span>Econometric Modelling</span>
+  <span>R</span>
+  <span>Data Visualisation</span>
+  <span>Excel</span>
+  <span>Financial Data Analysis</span>
+  <span>Operational Analysis</span>
+  <span>Research</span>
+  <span>Report Writing</span>
+  <span>Stakeholder Communication</span>
+  <span>Problem-Solving</span>
+  <span>Attention to Detail</span>
+</div>
+```
+
+## Academic and Data Projects
+
+```{=html}
+<div class="cv-section-card">
+  <h3>Academic and Analytical Project Work</h3>
+  <ul>
+    <li>Built a personal website to present data analysis and research work using R.</li>
+    <li>Conducted independent quantitative research projects using economic and financial datasets.</li>
+    <li>Applied statistical and econometric techniques to analyse real-world data and communicate findings through visualisations.</li>
+    <li>Completed an independent policy research project on Pakistan’s economic resilience using econometric techniques and longitudinal data.</li>
+  </ul>
+</div>
+```
+## Leadership and Achievements
+
+```{=html}
+<div class="cv-grid">
+
+  <div class="cv-section-card">
+    <h3>Ambassador and Delegate</h3>
+    <p class="cv-meta">Warwick Economics Summit | 2025 and 2026</p>
+    <p>Represented the University of Essex and engaged with students, speakers, and professionals on economics, business, financial markets, and policy issues.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Conference Volunteer</h3>
+    <p class="cv-meta">Lahore School of Economics | 2024</p>
+    <p>Supported event coordination, stakeholder communication, logistics, and teamwork in an academic conference setting.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Volunteer</h3>
+    <p class="cv-meta">OIL RIZQ, Pakistan | 2023</p>
+    <p>Supported fundraising initiatives and logistical planning for community outreach programmes.</p>
+  </div>
+
+  <div class="cv-section-card">
+    <h3>Competitive Golf Achievements</h3>
+    <p>1st Place – J.A. Zaman Memorial Golf Tournament</p>
+    <p>2nd Place – 25th Corps Command Tournament</p>
+  </div>
+
+</div>
+```
+
+## Additional Information
+
+- Fluent business English
+- Eligible to work in the United Kingdom
+- Strong written and verbal communication skills
+- Curious, adaptable, and eager to continue learning

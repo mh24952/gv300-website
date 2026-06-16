@@ -1,20 +1,24 @@
 name: "gv300-website"
-title: "Quantitative Politics Portfolio"
-description: "Quantitative Analysis Portfolio"
+title: "Muhammad Ahmad Hassan"
+description: "Professional portfolio showcasing academic work, analytical projects, and experience."
 
 output_dir: "."
 
 output:
-  distill::distill_website:
+  distill::distill_article:
     css: styles.css
 
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "My Work"
-      href: showcase.html
-    - text: "Text Analysis"
-      href: text-analysis.html
     - text: "About"
       href: about.html
+    - text: "Projects"
+      href: showcase.html
+    - text: "Experience"
+      href: experience.html
+    - text: "CV"
+      href: cv.html
+    - text: "Contact"
+      href: contact.html

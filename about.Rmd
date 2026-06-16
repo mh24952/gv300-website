@@ -1,36 +1,109 @@
 ---
-title: "About This Site"
-description: "Additional details about this website."
+title: "About"
+description: "Background, interests, and professional profile."
 author: null
 output:
   distill::distill_article:
     toc: false
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
-## About This Website
+## About Me
 
-This website was created as a part of my GV300 module (Advanced Quantitative Politics) at the University of Essex.
+I am an Economics and Politics graduate from the University of Essex with an interest in analysis, problem-solving, communication, and evidence-based decision-making.
 
-It serves as a portfolio where I present examples of my data analysis and research work.
+My academic background has helped me develop a structured way of understanding real-world issues. I am interested in how economic conditions, political institutions, markets, organisations, and policy decisions shape outcomes for individuals, businesses, and wider society.
 
-This website demonstrates my ability to:
+## Professional Snapshot
 
-- Analyse data using R  
-- Create clear and effective visualisations  
-- Communicate statistical results in simple and accessible language  
-- Present academic work in a structured and organised manner   
+```{=html}
+<div class="snapshot-grid">
+  <div class="snapshot-card">
+    <h3>Academic Base</h3>
+    <p>BSc Economics and Politics, with study across economics, econometrics, political economy, and quantitative political analysis.</p>
+  </div>
 
-## How This Website Was Built
+  <div class="snapshot-card">
+    <h3>Core Strengths</h3>
+    <p>Analytical thinking, written communication, problem-solving, organisation, and evidence-based decision-making.</p>
+  </div>
 
-This website was built using:
+  <div class="snapshot-card">
+    <h3>Methods & Tools</h3>
+    <p>Experience with R, econometric reasoning, data interpretation, research methods, and structured presentation of findings.</p>
+  </div>
 
-- **R Markdown** to combine writing and code in one document  
-- **Distill** for creating a clean and professional website layout   
-- **Git and GitHub** to manage and track changes  
-- **GitHub Pages** to publish the website online  
+  <div class="snapshot-card">
+    <h3>Professional Exposure</h3>
+    <p>Experience across banking, operations, customer-facing work, outreach, event coordination, and stakeholder-focused environments.</p>
+  </div>
+</div>
+```
 
-The goal of this website is to present a clear and professional academic portfolio that demonstrates my skills in quantitative analysis and data communication.
+## Academic Background
+
+During my degree, I studied areas including economics, econometrics, international political economy, conflict analysis, quantitative political analysis, and microeconomics.
+
+These subjects helped me build a foundation in analytical thinking, research methods, data interpretation, and clear written communication. Through academic and project-based work, I have gained experience in analysing information, using data, reviewing evidence, and presenting findings in a structured way.
+
+## How I Work
+```{=html}
+<div class="approach-flow">
+  <div class="approach-step">
+    <div class="approach-number">1</div>
+    <div>
+      <h3>Understand</h3>
+      <p>I begin by clarifying the problem, context, and objective so that the work is focused and relevant.</p>
+    </div>
+  </div>
+
+  <div class="approach-step">
+    <div class="approach-number">2</div>
+    <div>
+      <h3>Analyse</h3>
+      <p>I use evidence, data, research, and structured thinking to identify patterns, risks, and possible explanations.</p>
+    </div>
+  </div>
+
+  <div class="approach-step">
+    <div class="approach-number">3</div>
+    <div>
+      <h3>Communicate</h3>
+      <p>I aim to present findings clearly, practically, and in a way that different audiences can understand.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Areas of Interest
+
+My interests sit across connected areas that involve understanding problems, working with evidence, and communicating insights clearly:
+
+- Economic and policy analysis
+- Data analysis and quantitative methods
+- Financial and commercial awareness
+- Political economy and international affairs
+- Research and evidence-based decision-making
+- Governance, institutions, conflict, and development
+
+## Skills and Strengths
+
+Through academic projects, professional experience, and extracurricular activities, I have developed skills in:
+
+- Research and written communication
+- Data analysis using R
+- Econometric and quantitative reasoning
+- Report writing and structured presentation
+- Stakeholder communication
+- Organisation and attention to detail
+- Analytical problem-solving
+
+## Professional Focus
+
+My professional focus is on work that involves analysis, communication, problem-solving, and evidence-based decision-making.
+
+This portfolio brings together selected examples of my academic work, project-based learning, and professional experience, showing how I approach information, structure ideas, and apply analytical thinking across different contexts.

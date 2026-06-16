@@ -1,8 +1,8 @@
 ---
 title: "Muhammad Ahmad Hassan"
 description: |
-  **BSc Economics and Politics**  
-  University of Essex
+  **Economics & Politics Graduate**  
+  Economics, Policy & Data Analysis
 author: null
 output:
   distill::distill_article:
@@ -22,13 +22,10 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   <div class="profile-left">
     <img src="profile.jpg.jpeg" class="profile-photo" alt="Portrait of Muhammad Ahmad Hassan">
 
-    <h2 class="profile-name">Muhammad Ahmad Hassan</h2>
-
-    <div class="profile-links">
-      <a class="btn" href="https://www.linkedin.com/in/mahmadhassan1/" target="_blank">LinkedIn</a>
-      <a class="btn" href="https://github.com/mh24952" target="_blank">GitHub</a>
-      <a class="btn" href="mailto:mh24952@essex.ac.uk">Email</a>
-    </div>
+<div class="profile-links">
+  <a class="btn" href="https://www.linkedin.com/in/mahmadhassan1/" target="_blank">LinkedIn</a>
+  <a class="btn" href="mailto:mahmadhassan1@outlook.com">Email</a>
+</div>
   </div>
 
   <div class="profile-right">
@@ -36,23 +33,62 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 
-## About Me
+## Professional Profile
 
-I am a final-year BSc (Hons) Economics and Politics student at the University of Essex with a strong interest in how markets function and how political institutions shape economic outcomes.
+I am an Economics and Politics graduate from the University of Essex with a strong interest in analytical problem-solving, research, strategy, and evidence-based decision-making.
 
-Beyond my academic work, I enjoy reading widely to gain new perspectives on global economic and political issues, and I play golf in my free time.
+This website presents a selection of my academic work, professional experience, and project-based learning, highlighting my ability to analyse information, communicate clearly, and apply structured thinking across different contexts.
 
-## Bio
+## Areas of Focus
 
-My academic focus lies in quantitative analysis, political economy, and the interaction between markets and institutions. Through my studies, I have developed strong skills in statistical modelling, data analysis in R, and communicating empirical findings clearly and professionally.
+This portfolio is designed for employers, recruiters, and academic/professional contacts who want to understand my background beyond a CV. It highlights my analytical skills, project work, professional experience, and interest in applying structured thinking to real-world problems.
 
-## Education
-
-**University of Essex**  
-BSc (Hons) Economics and Politics  
-September 2023 – May 2026
-
+```{=html}
+<div class="card-grid">
+  <div class="info-card">
+    <h3>Analysis & Problem-Solving</h3>
+    <p>Ability to break down complex information, identify patterns, and communicate clear conclusions.</p>
   </div>
 
+  <div class="info-card">
+    <h3>Research & Evidence</h3>
+    <p>Experience using academic research, data, and structured methods to support evidence-based decision-making.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>Professional Experience</h3>
+    <p>Exposure to banking, operations, customer-facing work, outreach, and stakeholder-focused environments.</p>
+  </div>
 </div>
+```
+
+
+## Explore My Work
+
+```{=html}
+<div class="feature-list">
+  <div class="feature-item">
+    <h3>Projects</h3>
+    <p>Selected academic and analytical projects showing my research, data, and communication skills.</p>
+    <a href="showcase.html">View projects →</a>
+  </div>
+
+  <div class="feature-item">
+    <h3>Experience</h3>
+    <p>A summary of professional, voluntary, and leadership experiences across different settings.</p>
+    <a href="experience.html">View experience →</a>
+  </div>
+
+  <div class="feature-item">
+    <h3>CV</h3>
+    <p>A concise overview of my education, experience, skills, and achievements.</p>
+    <a href="cv.html">View CV →</a>
+  </div>
+</div>
+```
+
+```{=html}
+  </div>
+</div>
+```
 

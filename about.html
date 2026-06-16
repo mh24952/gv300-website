@@ -89,29 +89,29 @@ code span.wa { color: #5e5e5e; font-style: italic; }
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Muhammad Ahmad Hassan: About This Site</title>
+  <title>Muhammad Ahmad Hassan: About</title>
 
-  <meta property="description" itemprop="description" content="Additional details about this website." />
+  <meta property="description" itemprop="description" content="Background, interests, and professional profile." />
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Muhammad Ahmad Hassan: About This Site" />
+  <meta property="og:title" content="Muhammad Ahmad Hassan: About" />
   <meta property="og:type" content="article" />
-  <meta property="og:description" content="Additional details about this website." />
+  <meta property="og:description" content="Background, interests, and professional profile." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Muhammad Ahmad Hassan" />
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Muhammad Ahmad Hassan: About This Site" />
-  <meta property="twitter:description" content="Additional details about this website." />
+  <meta property="twitter:title" content="Muhammad Ahmad Hassan: About" />
+  <meta property="twitter:description" content="Background, interests, and professional profile." />
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["About This Site"]},{"type":"character","attributes":{},"value":["Additional details about this website."]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["About"]},{"type":"character","attributes":{},"value":["Background, interests, and professional profile."]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2907,8 +2907,440 @@ distill-header .nav a {
 }
 </script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+.navbar-brand {
+font-weight: 700;
+letter-spacing: 0.5px;
+}
+.navbar-nav .nav-link {
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+
+.d-byline {
+margin-top: 4px;
+margin-bottom: 8px;
+}
+.d-title {
+margin-bottom: 6px;
+}
+.d-title-block {
+margin-bottom: 12px;
+}
+
+.d-contents {
+margin-top: 8px;
+}
+.d-contents nav ul {
+padding-left: 18px;
+}
+.d-contents nav ul li {
+margin-bottom: 4px;
+}
+.profile-layout {
+display: flex;
+gap: 56px;
+align-items: flex-start;
+margin-top: 20px;
+}
+.profile-left {
+width: 38%;
+text-align: center;
+}
+.profile-right {
+width: 62%;
+}
+.profile-photo {
+width: 260px;
+height: auto;
+border-radius: 6px;
+margin-bottom: 24px;
+}
+.profile-name {
+font-size: 2.4rem;
+margin-bottom: 12px;
+}
+.profile-links {
+display: flex;
+justify-content: center;
+gap: 14px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+.profile-links .btn {
+display: inline-block;
+padding: 10px 22px;
+border: 1px solid #bfc3c7;
+border-radius: 6px;
+background-color: #ffffff;
+color: #2c2c2c;
+text-decoration: none;
+font-weight: 500;
+transition: all 0.2s ease; }
+.profile-links .btn:hover {
+background-color: #f5f5f5;
+text-decoration: none;
+transform: translateY(-1px);
+}
+@media (max-width: 900px) {
+.profile-layout {
+flex-direction: column;
+}
+.profile-left,
+.profile-right {
+width: 100%;
+}
+}
+.profile-subtitle {
+font-size: 1rem;
+color: #555;
+margin-top: -12px;
+margin-bottom: 20px;
+font-weight: 500;
+}
+.card-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+margin: 24px 0 34px 0;
+}
+.info-card {
+border: 1px solid #e1e4e8;
+border-radius: 10px;
+padding: 22px;
+background-color: #ffffff;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.info-card h3 {
+margin-top: 0;
+font-size: 1.05rem;
+}
+.info-card p {
+font-size: 0.95rem;
+line-height: 1.5;
+}
+.feature-list {
+display: grid;
+grid-template-columns: 1fr;
+gap: 18px;
+margin-top: 20px;
+}
+.feature-item {
+border-left: 5px solid #0d6efd;
+padding: 16px 20px;
+background-color: #fafafa;
+border-radius: 6px;
+}
+.feature-item h3 {
+margin-top: 0;
+margin-bottom: 8px;
+}
+.feature-item p {
+margin-bottom: 8px;
+}
+.feature-item a {
+font-weight: 600;
+text-decoration: none;
+}
+.feature-item a:hover {
+text-decoration: underline;
+}
+.profile-right h2 {
+margin-top: 40px;
+}
+@media (max-width: 900px) {
+.card-grid {
+grid-template-columns: 1fr;
+}
+}
+.snapshot-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+margin: 24px 0 34px 0;
+}
+.snapshot-card {
+border: 1px solid #e1e4e8;
+border-radius: 10px;
+padding: 20px;
+background-color: #ffffff;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.snapshot-card h3 {
+margin-top: 0;
+font-size: 1.05rem;
+}
+.snapshot-card p {
+font-size: 0.95rem;
+line-height: 1.5;
+}
+@media (max-width: 900px) {
+.snapshot-grid {
+grid-template-columns: 1fr;
+}
+}
+
+.d-title h1 {
+font-size: 2.6rem;
+line-height: 1.15;
+}
+.d-title p {
+font-size: 1.05rem;
+}
+
+.approach-flow {
+margin: 24px 0 34px 0;
+border-left: 3px solid #0d6efd;
+padding-left: 22px;
+}
+.approach-step {
+display: flex;
+gap: 16px;
+margin-bottom: 22px;
+align-items: flex-start;
+}
+.approach-step:last-child {
+margin-bottom: 0;
+}
+.approach-number {
+min-width: 34px;
+height: 34px;
+border-radius: 50%;
+background-color: #0d6efd;
+color: #ffffff;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.approach-step h3 {
+margin-top: 2px;
+margin-bottom: 6px;
+font-size: 1.05rem;
+}
+.approach-step p {
+margin-bottom: 0;
+font-size: 0.95rem;
+line-height: 1.5;
+}
+</style>
   <!--/radix_placeholder_site_in_header-->
 
+  <style type="text/css">.navbar-brand {
+font-weight: 700;
+letter-spacing: 0.5px;
+}
+.navbar-nav .nav-link {
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+
+.d-byline {
+margin-top: 4px;
+margin-bottom: 8px;
+}
+.d-title {
+margin-bottom: 6px;
+}
+.d-title-block {
+margin-bottom: 12px;
+}
+
+.d-contents {
+margin-top: 8px;
+}
+.d-contents nav ul {
+padding-left: 18px;
+}
+.d-contents nav ul li {
+margin-bottom: 4px;
+}
+.profile-layout {
+display: flex;
+gap: 56px;
+align-items: flex-start;
+margin-top: 20px;
+}
+.profile-left {
+width: 38%;
+text-align: center;
+}
+.profile-right {
+width: 62%;
+}
+.profile-photo {
+width: 260px;
+height: auto;
+border-radius: 6px;
+margin-bottom: 24px;
+}
+.profile-name {
+font-size: 2.4rem;
+margin-bottom: 12px;
+}
+.profile-links {
+display: flex;
+justify-content: center;
+gap: 14px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+.profile-links .btn {
+display: inline-block;
+padding: 10px 22px;
+border: 1px solid #bfc3c7;
+border-radius: 6px;
+background-color: #ffffff;
+color: #2c2c2c;
+text-decoration: none;
+font-weight: 500;
+transition: all 0.2s ease; }
+.profile-links .btn:hover {
+background-color: #f5f5f5;
+text-decoration: none;
+transform: translateY(-1px);
+}
+@media (max-width: 900px) {
+.profile-layout {
+flex-direction: column;
+}
+.profile-left,
+.profile-right {
+width: 100%;
+}
+}
+.profile-subtitle {
+font-size: 1rem;
+color: #555;
+margin-top: -12px;
+margin-bottom: 20px;
+font-weight: 500;
+}
+.card-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+margin: 24px 0 34px 0;
+}
+.info-card {
+border: 1px solid #e1e4e8;
+border-radius: 10px;
+padding: 22px;
+background-color: #ffffff;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.info-card h3 {
+margin-top: 0;
+font-size: 1.05rem;
+}
+.info-card p {
+font-size: 0.95rem;
+line-height: 1.5;
+}
+.feature-list {
+display: grid;
+grid-template-columns: 1fr;
+gap: 18px;
+margin-top: 20px;
+}
+.feature-item {
+border-left: 5px solid #0d6efd;
+padding: 16px 20px;
+background-color: #fafafa;
+border-radius: 6px;
+}
+.feature-item h3 {
+margin-top: 0;
+margin-bottom: 8px;
+}
+.feature-item p {
+margin-bottom: 8px;
+}
+.feature-item a {
+font-weight: 600;
+text-decoration: none;
+}
+.feature-item a:hover {
+text-decoration: underline;
+}
+.profile-right h2 {
+margin-top: 40px;
+}
+@media (max-width: 900px) {
+.card-grid {
+grid-template-columns: 1fr;
+}
+}
+.snapshot-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+margin: 24px 0 34px 0;
+}
+.snapshot-card {
+border: 1px solid #e1e4e8;
+border-radius: 10px;
+padding: 20px;
+background-color: #ffffff;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.snapshot-card h3 {
+margin-top: 0;
+font-size: 1.05rem;
+}
+.snapshot-card p {
+font-size: 0.95rem;
+line-height: 1.5;
+}
+@media (max-width: 900px) {
+.snapshot-grid {
+grid-template-columns: 1fr;
+}
+}
+
+.d-title h1 {
+font-size: 2.6rem;
+line-height: 1.15;
+}
+.d-title p {
+font-size: 1.05rem;
+}
+
+.approach-flow {
+margin: 24px 0 34px 0;
+border-left: 3px solid #0d6efd;
+padding-left: 22px;
+}
+.approach-step {
+display: flex;
+gap: 16px;
+margin-bottom: 22px;
+align-items: flex-start;
+}
+.approach-step:last-child {
+margin-bottom: 0;
+}
+.approach-number {
+min-width: 34px;
+height: 34px;
+border-radius: 50%;
+background-color: #0d6efd;
+color: #ffffff;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.approach-step h3 {
+margin-top: 2px;
+margin-bottom: 6px;
+font-size: 1.05rem;
+}
+.approach-step p {
+margin-bottom: 0;
+font-size: 0.95rem;
+line-height: 1.5;
+}</style>
 
 </head>
 
@@ -2917,7 +3349,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About This Site","description":"Additional details about this website.","authors":[]}
+{"title":"About","description":"Background, interests, and professional profile.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2929,9 +3361,11 @@ distill-header .nav a {
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="showcase.html">My Work</a>
-<a href="text-analysis.html">Text Analysis</a>
 <a href="about.html">About</a>
+<a href="showcase.html">Projects</a>
+<a href="experience.html">Experience</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
 <a href="javascript:void(0);" class="nav-toggle">☰</a>
 </div>
 </nav>
@@ -2941,40 +3375,93 @@ distill-header .nav a {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About This Site</h1>
+<h1>About</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>Additional details about this website.</p>
+<p>Background, interests, and professional profile.</p>
 </div>
 
 
 <div class="d-article">
-<h2 id="about-this-website">About This Website</h2>
-<p>This website was created as a part of my GV300 module (Advanced Quantitative Politics) at the University of Essex.</p>
-<p>It serves as a portfolio where I present examples of my data analysis and research work.</p>
-<p>This website demonstrates my ability to:</p>
+<h2 id="about-me">About Me</h2>
+<p>I am an Economics and Politics graduate from the University of Essex with an interest in analysis, problem-solving, communication, and evidence-based decision-making.</p>
+<p>My academic background has helped me develop a structured way of understanding real-world issues. I am interested in how economic conditions, political institutions, markets, organisations, and policy decisions shape outcomes for individuals, businesses, and wider society.</p>
+<h2 id="professional-snapshot">Professional Snapshot</h2>
+<div class="snapshot-grid">
+  <div class="snapshot-card">
+    <h3>Academic Base</h3>
+    <p>BSc Economics and Politics, with study across economics, econometrics, political economy, and quantitative political analysis.</p>
+  </div>
+
+  <div class="snapshot-card">
+    <h3>Core Strengths</h3>
+    <p>Analytical thinking, written communication, problem-solving, organisation, and evidence-based decision-making.</p>
+  </div>
+
+  <div class="snapshot-card">
+    <h3>Methods &amp; Tools</h3>
+    <p>Experience with R, econometric reasoning, data interpretation, research methods, and structured presentation of findings.</p>
+  </div>
+
+  <div class="snapshot-card">
+    <h3>Professional Exposure</h3>
+    <p>Experience across banking, operations, customer-facing work, outreach, event coordination, and stakeholder-focused environments.</p>
+  </div>
+</div>
+<h2 id="academic-background">Academic Background</h2>
+<p>During my degree, I studied areas including economics, econometrics, international political economy, conflict analysis, quantitative political analysis, and microeconomics.</p>
+<p>These subjects helped me build a foundation in analytical thinking, research methods, data interpretation, and clear written communication. Through academic and project-based work, I have gained experience in analysing information, using data, reviewing evidence, and presenting findings in a structured way.</p>
+<h2 id="how-i-work">How I Work</h2>
+<div class="approach-flow">
+  <div class="approach-step">
+    <div class="approach-number">1</div>
+    <div>
+      <h3>Understand</h3>
+      <p>I begin by clarifying the problem, context, and objective so that the work is focused and relevant.</p>
+    </div>
+  </div>
+
+  <div class="approach-step">
+    <div class="approach-number">2</div>
+    <div>
+      <h3>Analyse</h3>
+      <p>I use evidence, data, research, and structured thinking to identify patterns, risks, and possible explanations.</p>
+    </div>
+  </div>
+
+  <div class="approach-step">
+    <div class="approach-number">3</div>
+    <div>
+      <h3>Communicate</h3>
+      <p>I aim to present findings clearly, practically, and in a way that different audiences can understand.</p>
+    </div>
+  </div>
+</div>
+<h2 id="areas-of-interest">Areas of Interest</h2>
+<p>My interests sit across connected areas that involve understanding problems, working with evidence, and communicating insights clearly:</p>
 <ul>
-<li>Analyse data using R<br />
-</li>
-<li>Create clear and effective visualisations<br />
-</li>
-<li>Communicate statistical results in simple and accessible language<br />
-</li>
-<li>Present academic work in a structured and organised manner</li>
+<li>Economic and policy analysis</li>
+<li>Data analysis and quantitative methods</li>
+<li>Financial and commercial awareness</li>
+<li>Political economy and international affairs</li>
+<li>Research and evidence-based decision-making</li>
+<li>Governance, institutions, conflict, and development</li>
 </ul>
-<h2 id="how-this-website-was-built">How This Website Was Built</h2>
-<p>This website was built using:</p>
+<h2 id="skills-and-strengths">Skills and Strengths</h2>
+<p>Through academic projects, professional experience, and extracurricular activities, I have developed skills in:</p>
 <ul>
-<li><strong>R Markdown</strong> to combine writing and code in one document<br />
-</li>
-<li><strong>Distill</strong> for creating a clean and professional website layout<br />
-</li>
-<li><strong>Git and GitHub</strong> to manage and track changes<br />
-</li>
-<li><strong>GitHub Pages</strong> to publish the website online</li>
+<li>Research and written communication</li>
+<li>Data analysis using R</li>
+<li>Econometric and quantitative reasoning</li>
+<li>Report writing and structured presentation</li>
+<li>Stakeholder communication</li>
+<li>Organisation and attention to detail</li>
+<li>Analytical problem-solving</li>
 </ul>
-<p>The goal of this website is to present a clear and professional academic portfolio that demonstrates my skills in quantitative analysis and data communication.</p>
+<h2 id="professional-focus">Professional Focus</h2>
+<p>My professional focus is on work that involves analysis, communication, problem-solving, and evidence-based decision-making.</p>
+<p>This portfolio brings together selected examples of my academic work, project-based learning, and professional experience, showing how I approach information, structure ideas, and apply analytical thinking across different contexts.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

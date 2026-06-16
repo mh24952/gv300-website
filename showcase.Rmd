@@ -1,86 +1,84 @@
 ---
-title: "GV300 Showcase"
-author:
-  - name: "Muhammad Ahmad Hassan"
-output: distill::distill_article
+title: "Projects"
+description: "Selected academic and analytical projects."
+author: null
+output:
+  distill::distill_article:
+    toc: false
+    css: styles.css
 ---
-## Introduction
 
-This page presents selected work from GV300 (Advanced Quantitative Politics).  
-It demonstrates my ability to analyse data in R and communicate results clearly.
-
-## Example Analysis
-
-Here I will include:
-- Data visualisations
-- Statistical models
-- Interpretation of results
-
-## Visualization 
-
-*example from assignment 2*
-
-In this example, I studied how the number of voters differs between constituencies in the United Kingdom.
-
-The main question I was asking was:
-
-**Are votes equally represented across constituencies?**
-
-In a fair system, each Member of Parliament (MP) should represent a similar number of voters.  
-However, if some constituencies are much larger than others, then some MPs represent many more people. This could mean that votes do not have equal weight everywhere in the country.
-
-To investigate this, I :
-
-- Download official UK election data  
-- Clean and organise the data using R  
-- Calculate the number of valid votes in each constituency  
-- Use a boxplot to compare differences between countries  
-
-The aim of this analysis was to show that I can work with real data, create clear visualisations, and explain statistical results in a simple and understandable way.
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
 
 
-## Data and Setup
+## Selected Analytical Work
 
-```{r setup, message=FALSE, warning=FALSE}
-library(tidyverse)
+This page presents an example of academic and analytical project work completed as part of my Economics and Politics studies. The project demonstrates my ability to work with data, interpret evidence, create clear visualisations, and communicate findings in an accessible way.
+
+```{=html}
+<div class="card-grid"> <div class="info-card"> <h3>UK Constituency Analysis</h3> <p>An analysis of variation in constituency electorates across the United Kingdom, using official election data and R-based visualisation.</p> </div> <div class="info-card"> <h3>Text Analysis Project</h3> <p>A text-based analytical project exploring political or policy-related material through structured methods and interpretation.</p> </div> <div class="info-card"> <h3>Quantitative Politics Portfolio</h3> <p>Project-based work developed through my Economics and Politics studies, with a focus on data, evidence, and communication.</p> </div> </div>
+```
+
+## Featured Project: UK Constituency Electorate Analysis
+
+This project examines whether constituency electorates vary across different parts of the United Kingdom.
+
+In representative democracies, constituencies are expected to provide broadly comparable levels of representation. If some constituencies have much larger electorates than others, then MPs may represent very different numbers of voters. This raises important questions about electoral geography, representation, and institutional design.
+
+The aim of this project was to demonstrate my ability to:
+
+- Work with official election data
+- Clean and organise data using R
+- Produce clear and interpretable visualisations
+- Explain quantitative results in accessible language
+- Connect data analysis to wider political and institutional questions
+
+## Data and Method
+
+The analysis uses official UK Parliament election data. I cleaned the dataset, grouped results by constituency, and compared constituency electorates across England, Scotland, Wales, and Northern Ireland.
+
+```{r constituency-analysis, fig.width=8, fig.height=5}
+library(readr)
 library(dplyr)
 library(stringr)
 library(ggplot2)
 
 # Load UK election data directly from official source
 uk_csv <- "https://electionresults.parliament.uk/general-elections/6/candidacies.csv"
-uk_raw <- readr::read_csv(uk_csv, show_col_types = FALSE)
+uk_raw <- read_csv(uk_csv, show_col_types = FALSE)
 
 # Clean column names
 names(uk_raw) <- names(uk_raw) %>%
   tolower() %>%
   str_replace_all("\\s+", "_")
 
-# Data cleaning
+# Prepare constituency-level data
 uk <- uk_raw %>%
   filter(!`election_is_by-election`) %>%
   select(
     constituency = constituency_name,
-    country      = country_name,
-    valid_votes  = candidate_vote_count,
-    electorate   = electorate
+    country = country_name,
+    valid_votes = candidate_vote_count,
+    electorate = electorate
   ) %>%
   group_by(country, constituency) %>%
   summarise(
     valid_votes = sum(valid_votes, na.rm = TRUE),
-    electorate  = max(electorate, na.rm = TRUE),
+    electorate = max(electorate, na.rm = TRUE),
     .groups = "drop"
   ) %>%
-  mutate(turnout_registered = 100 * valid_votes / electorate) %>%
-  filter(is.finite(turnout_registered), electorate > 0)
+  filter(is.finite(electorate), electorate > 0)
 
-ggplot(uk, aes(x = country, y = valid_votes, fill = country)) +
+# Visualise constituency electorate size by country
+ggplot(uk, aes(x = country, y = electorate, fill = country)) +
   geom_boxplot(alpha = 0.7) +
   labs(
-    title = "Constituency Size by Country",
-    subtitle = "Boxplots show medians and variation clearly",
+    title = "Constituency Electorate Size by Country",
+    subtitle = "Boxplots show median, spread, and outliers across UK constituencies",
     x = "Country",
-    y = "Valid Votes"
+    y = "Electorate"
   ) +
   theme_minimal() +
   theme(
@@ -88,40 +86,26 @@ ggplot(uk, aes(x = country, y = valid_votes, fill = country)) +
     legend.position = "none"
   )
 ```
-## Visualising Constituency Size Differences
-
-I compared variation across countries by using a boxplot.
-The boxplot showed the median, spread, and outlier for each country.
 
 ## Interpretation
 
-The boxplot shows that constituency sizes are not the same across the UK.
+The boxplot shows that constituency electorate sizes vary across the United Kingdom.
 
-England has a wide range of constituency sizes. Some are much bigger than others.
+England shows noticeable variation in electorate size, meaning that some constituencies have larger electorates than others. Scotland and Wales also show variation, while Northern Ireland appears to have a narrower spread compared with some other parts of the UK.
 
-Scotland has a few very small constituencies, which appear as dots outside the main box (these are called outliers).
+Overall, the analysis shows that constituencies can differ in the number of registered voters they contain. This is relevant because constituency size can inform wider debates about representation, electoral boundaries, and democratic institutions.
 
-Wales seems to have slightly smaller typical constituency sizes compared to England.
+## Skills Demonstrated
 
-Northern Ireland’s constituencies are more similar to each other, meaning there is less variation.
+This project demonstrates my ability to:
 
-Overall, the graph shows that the number of voters per constituency is not equal across the UK.
+- Use R for data cleaning and analysis
+- Work with real-world public data
+- Create clear visualisations using `ggplot2`
+- Summarise and interpret quantitative results
+- Communicate findings in a clear and accessible way
+- Connect data analysis to wider political and institutional questions
 
-This means that some Members of Parliament (MPs) represent many more voters than others.
-In larger constituencies, each vote may carry slightly less influence compared to smaller constituencies.
+## Project Reflection
 
-This raises important questions about fairness and equal representation in elections.
-
-This variation highlights potential inequalities in representation, which is an important concern in democratic systems.
-
-## Conclusion
-
-This analysis shows that I can:
-
-- Clean and organise real election data  
-- Use R to summarise and group data correctly  
-- Create clear and easy-to-read visualisations  
-- Explain statistical results in simple and understandable language  
-
-The code is fully reproducible, meaning anyone can run it and obtain the same results.  
-The dataset is downloaded directly from an official UK Parliament source.
+This analysis strengthened my understanding of how quantitative methods can be used to examine political institutions. It also helped me practise turning raw data into a clear visual output and explaining the results in a way that is understandable to both technical and non-technical audiences.

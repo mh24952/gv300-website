@@ -1,0 +1,100 @@
+---
+title: "Experience"
+output:
+  distill::distill_article:
+    toc: false
+    css: styles.css
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+## Experience Overview
+
+My experience includes professional, internship, voluntary, and leadership roles across banking, finance, operations, retail, events, and community-focused organisations.
+
+These experiences have helped me develop analytical thinking, communication, organisation, attention to detail, stakeholder awareness, and the ability to work responsibly in different professional environments.
+
+## Professional Experience
+
+```{=html}
+<div class="experience-timeline">
+
+  <div class="experience-item">
+    <h3>Work Placement Intern</h3>
+    <p class="experience-meta">HBL UK, London, United Kingdom | August 2025</p>
+    <p>Gained exposure to a regulated financial environment across Wealth Management, Commercial Banking, and Treasury teams.</p>
+    <ul>
+      <li>Observed how financial market data, client information, and business analysis support commercial and risk-based decision-making.</li>
+      <li>Supported onboarding and documentation processes, strengthening accuracy, confidentiality, and process discipline.</li>
+      <li>Developed awareness of regulatory requirements, internal controls, client needs, and structured financial processes.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Online Assistant</h3>
+    <p class="experience-meta">Sainsbury’s, Colchester, United Kingdom | September 2025 – January 2026</p>
+    <p>Worked in a fast-paced online retail environment, supporting online order preparation, stock movement, substitutions, and customer service while meeting operational targets.</p>
+    <ul>
+      <li>Prepared and supported online customer orders with accuracy, organisation, and attention to detail.</li>
+      <li>Handled stock movement and substitutions while maintaining service standards under time pressure.</li>
+      <li>Developed collaboration, communication, adaptability, and real-time problem-solving skills.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Finance and Operations Intern</h3>
+    <p class="experience-meta">Ahmad Traders, Lahore, Pakistan | June – July 2024</p>
+    <p>Worked with sales, financial, and operational information to support business reporting and performance understanding.</p>
+    <ul>
+      <li>Analysed sales and financial data to identify trends and support forecasting.</li>
+      <li>Assisted in preparing budgets, reports, and operational summaries for management decision-making.</li>
+      <li>Strengthened analytical thinking, reporting accuracy, and commercial awareness.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Trading Assistant</h3>
+    <p class="experience-meta">Sainsbury’s, Colchester, United Kingdom | December 2024</p>
+    <p>Supported shop-floor operations during a busy trading period, helping with stock replenishment, product rotation, customer service, and store organisation.</p>
+    <ul>
+      <li>Maintained product availability, store standards, and organised shop-floor presentation.</li>
+      <li>Supported customers professionally while working in a busy customer-facing environment.</li>
+      <li>Developed teamwork, communication, adaptability, reliability, and attention to detail.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Manufacturing and Operations Intern</h3>
+    <p class="experience-meta">Pak Lamps Limited, Lahore, Pakistan | August 2023</p>
+    <p>Gained practical exposure to manufacturing operations, production workflows, and supply chain processes.</p>
+    <ul>
+      <li>Evaluated production workflows and supply chain processes to understand inefficiencies and operational risks.</li>
+      <li>Produced a structured report analysing operational performance and areas for improvement.</li>
+      <li>Built experience in using evidence and analysis to support practical business recommendations.</li>
+    </ul>
+  </div>
+
+</div>
+```
+
+## Voluntary, Leadership and Event Experience
+
+```{=html}
+<div class="experience-timeline"> <div class="experience-item"> <h3>Ambassador and Delegate</h3> <p class="experience-meta">Warwick Economics Summit | 2025 and 2026</p> <p>Represented the University of Essex at an international economics summit, engaging with students, speakers, and professionals.</p> <ul> <li>Engaged with discussions on global economic trends, business issues, financial markets, and policy challenges.</li> <li>Strengthened stakeholder engagement, communication, confidence, and ability to learn from diverse perspectives.</li> </ul> </div> <div class="experience-item"> <h3>Conference Volunteer</h3> <p class="experience-meta">Lahore School of Economics | 2024</p> <p>Supported event coordination and stakeholder communication at a large-scale academic conference.</p> <ul> <li>Assisted with event organisation, logistics, and communication across teams.</li> <li>Worked collaboratively in a professional environment requiring organisation, reliability, and attention to detail.</li> </ul> </div> <div class="experience-item"> <h3>Volunteer</h3> <p class="experience-meta">OIL RIZQ, Pakistan | 2023</p> <p>Supported community outreach work through fundraising initiatives and logistical planning.</p> <ul> <li>Contributed to fundraising and outreach activities for community-focused programmes.</li> <li>Developed teamwork, communication, initiative, and collaborative problem-solving skills.</li> </ul> </div> </div>
+```
+
+## What This Experience Shows
+
+Across these roles, I have developed a practical understanding of professional environments and strengthened my ability to work with people, information, and responsibilities in a structured way.
+
+My experience demonstrates:
+
+- Analytical thinking and evidence-based problem-solving
+- Communication and stakeholder awareness
+- Organisation, accuracy, and attention to detail
+- Commercial and operational awareness
+- Teamwork, responsibility, and adaptability
+- Ability to learn across different professional environments

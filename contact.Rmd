@@ -1,0 +1,59 @@
+---
+title: "Contact"
+description: "Get in touch for professional, academic, and project-related opportunities."
+author: null
+output:
+  distill::distill_article:
+    toc: false
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+## Get in Touch
+
+Thank you for visiting my portfolio.
+
+I am open to professional, academic, research, and project-related opportunities where I can apply analytical thinking, communication, data analysis, and evidence-based problem-solving.
+
+The best way to contact me is by email or through LinkedIn.
+
+```{=html}
+<div class="contact-grid">
+
+  <div class="contact-card">
+    <h3>Email</h3>
+    <p>For professional enquiries, applications, collaborations, or academic opportunities.</p>
+    <a href="mailto:mahmadhassan1@outlook.com">mahmadhassan1@outlook.com</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>LinkedIn</h3>
+    <p>Connect with me professionally and view updates on my experience, interests, and projects.</p>
+    <a href="https://www.linkedin.com/in/mahmadhassan1/" target="_blank">linkedin.com/in/mahmadhassan1</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>Portfolio</h3>
+    <p>This website presents my academic work, professional experience, and analytical project work.</p>
+    <a href="https://mh24952.github.io/gv300-website/" target="_blank">mh24952.github.io/gv300-website</a>
+  </div>
+
+</div>
+```
+
+## Professional Interests
+
+I am particularly interested in opportunities connected to:
+
+- Economic and financial analysis
+- Data analysis and research
+- Policy and political economy
+- Commercial and business analysis
+- Risk, operations, and evidence-based decision-making
+
+## Availability
+
+I am based in the United Kingdom and open to discussing graduate, internship, research, and professional opportunities.
